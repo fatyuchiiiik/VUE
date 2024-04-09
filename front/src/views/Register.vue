@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <form @submit.prevent="goRegister">
-            <h2 class="card-title">Registration</h2>
+            <h2 class="card-title">Регистрация</h2>
             <label class="input input-bordered flex items-center gap-2">
                Email <input type="text" class="grow"  v-model="email"/>
             </label>
@@ -11,8 +11,8 @@
             <label class="input input-bordered flex items-center gap-2">
                Name <input type="text" class="grow"  v-model="name"/>
             </label>
-            <button type="submit" class="btn btn-accent">Submit</button>
-            <span>already have an account?  <a class="link link-accent" href="/login">login</a></span>
+            <button type="submit" class="btn btn-accent">зарегистрироваться</button>
+            <span>уже есть аккаунт?  <a class="link link-accent" href="/login">войдите</a></span>
         </form>
     </div>
 </template>

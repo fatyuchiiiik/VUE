@@ -1,16 +1,23 @@
 <template>
 
-  <div class="card card-side bg-base-100 shadow-xl flex">
-  <figure><img src="./image 16.png" alt="Movie"/></figure>
+<div class="container mx-auto pt-10">
+  <div class="card card-side bg-base-100 shadow-md flex">
+  <div class="size-45"><img src="./image 16.png" alt="Movie"/></div>
   <div class="card-body">
-    <h2 class="card-title">Современные решения для изучения 1С</h2>
-    <p>Сделайте обучение интересным!</p>
+    <h2 class="card-title text-lg">Современные решения для изучения 1С</h2>
+    
+    <p>Наша команда создает проекты для обучения школьников основам работы в 1С.
+      Удобный и гибкий графический интефейс понятно объяснит, как работать в 1С
+    </p>
+    <p>Сделайте обучение интересным! </p>
     <div class="card-actions justify-end">
-      <a class="btn btn-accent" href="/register">Регистрация</a>
+  
+  <p class="text-lg font-semibold">Чтобы получить доступ к материалам - авторизуйтесь</p>
+      <a class="btn btn-accent" href="/login">Войти</a>
     </div>
   </div>
 </div>
-
+</div>
 </template>
 
 <script>

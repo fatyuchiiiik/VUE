@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <form class="main-form" @submit.prevent>
-            <input type="text" placeholder="Введите название" class="input-form title" v-model="title">
-            <input type="text" placeholder="Введите содержимое" class="input-form body" v-model="body">
-            <button class="create-post" @click="createPost()">Создать пост</button>
+      <div class="container mx-auto pt-25">
+        <form class="main-form mx-auto" @submit.prevent>
+            <input type="text" placeholder="Введите название" class="input input-bordered w-full max-w-xs" v-model="title"/>
+            <textarea class="textarea textarea-bordered" placeholder="Введите содержимое" v-model="body"></textarea>
+            <button class="btn btn-secondary" @click="createPost()">Создать пост</button>
         </form>
     </div>
   </template>

@@ -1,12 +1,19 @@
 <template>
-    <div class="post-info">
-        <div class="title">
-            {{ title }}
-        </div>
-        <div class="body">
-            {{ body }}
-        </div>
+    <div class="container mx-auto pt-10">
+  <div class="card card-side bg-base-100 shadow-md flex">
+
+  <div class="card-body">
+    <h2 class="card-title text-xl">
+        {{ title }}
+    </h2>
+    <p class="text-lg font-semibold">
+        {{ body }}
+    </p>
+    
     </div>
+</div>
+</div>
+    
 </template>
 
 <script>
