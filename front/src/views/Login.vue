@@ -38,7 +38,7 @@ export default {
     }
 }
 </script>
-<style>
+<!-- <style>
 
 .home {
     position: relative;
@@ -55,4 +55,4 @@ form {
     row-gap: 20px;
 }
 
-</style>
+</style> -->

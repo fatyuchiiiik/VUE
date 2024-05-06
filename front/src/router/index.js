@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
 import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
+import Profile from '@/views/Profile.vue'
 import instance from '@/middlewares'
 
 /*проверка авторизирован ли пользователь прописывается сдесь*/
@@ -27,6 +28,11 @@ const routes = [
     path: '/register',
     name: 'register',
     component: Register
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: Profile
   }
 
 ]

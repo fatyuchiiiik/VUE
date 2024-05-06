@@ -28,7 +28,7 @@
     }
   </script>
   
-  <style>
+  <!-- <style>
     .main-form {
         display: flex;
         flex-direction: column;
@@ -61,4 +61,4 @@
     .create-post:hover {
         background-color: #42b893;
     }
-  </style>
+  </style> -->

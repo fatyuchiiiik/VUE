@@ -30,7 +30,7 @@ export default {
     }
 }
 </script>
-
+<!-- 
 <style>
     .post-info {
         display: flex;
@@ -49,4 +49,4 @@ export default {
     .body {
         font-size: 0.9rem;
     }
-</style>
+</style> -->

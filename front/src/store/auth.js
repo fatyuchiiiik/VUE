@@ -64,7 +64,7 @@ export default {
             localStorage.setItem('accessToken', result.accessToken)
             localStorage.setItem('refreshToken', result.refreshToken)
             localStorage.setItem('uid', result.uid)
-            router.push('/')
+            router.push('/profile')
             return
         },
         async changeAccess({}) {
