@@ -8,7 +8,7 @@
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a href="/">Главная</a></li>
         <li><a href="/about">Новости</a></li>
-        <li><a href="/login">Вход</a></li>
+        <li><a href="/profile">Личный кабинет</a></li>
         <li><a href="/register">Регистрация</a></li>
       </ul>
     </div>
@@ -17,7 +17,7 @@
     <a class="btn btn-ghost text-lg" href="/">Проектные решения 1С</a>
   </div>
   <div class="navbar-end">
-    <a class="btn" @click="logout()" href="/">выйти</a>
+    <a class="btn" @click="logout()" href="/login">выйти</a>
   </div>
 </div>
 <router-view/>

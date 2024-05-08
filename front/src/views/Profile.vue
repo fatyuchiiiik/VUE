@@ -1,9 +1,11 @@
 <template lang="">
-    <div>
-        <div class="window-label">
-        {{ text }}
-      </div>
+  <div class="container mx-auto pt-10">
+    <div class="card w-96 bg-base-100 shadow-xl">
+      <div class="card-body">
+      <p>{{ text }}</p>  
+      </div>  
     </div>
+  </div>
 </template>
 <script>
 import { mapActions } from 'vuex';
@@ -27,7 +29,7 @@ export default {
       this.text = `Вы авторизованы как ${this.name}`
 
     } else{
-      this.text = 'You are not authorized'
+      this.text = 'Вы не авторизованы';
     }
   }
 }
