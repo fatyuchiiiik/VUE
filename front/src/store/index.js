@@ -2,6 +2,7 @@
 import { createStore } from 'vuex'
 import auth from './auth'
 import user from './user'
+import event from './event'
 
 export default createStore({
   state: {
@@ -14,6 +15,7 @@ export default createStore({
   },
   modules: {
     auth: auth,
-    user: user
+    user: user,
+    event: event
   }
 })

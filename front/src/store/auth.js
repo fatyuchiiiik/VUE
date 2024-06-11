@@ -77,6 +77,14 @@ export default {
             const result = response.data
             localStorage.setItem('accessToken', result.accessToken)
             localStorage.setItem('refreshToken', result.refreshToken)
+        },
+        logout({ commit }) {
+            commit('setAuth', false)
+            localStorage.removeItem('uid')
+            localStorage.removeItem('accessToken')
+            localStorage.removeItem('refreshToken')
+            router.push('/login')
+            return
         }
     }
 }

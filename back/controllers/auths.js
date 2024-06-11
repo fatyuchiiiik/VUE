@@ -1,4 +1,5 @@
 const { user } = require('../models/users.js')
+const { event } = require('../models/events.js')
 const { auth } = require('../models/auths.js')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
@@ -24,7 +25,8 @@ exports.signup = async (req, res) => {
         const createdUser = await user.create({
             uid: authed.uid,
             name: req.body.name,
-            likes: 0
+            likes: 0,
+            security: req.body.security,
         })
         return res.status(201).send({ message: 'registred', uid: createdUser.uid })
     } catch (error) {

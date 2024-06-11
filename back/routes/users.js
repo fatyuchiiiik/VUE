@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const { authJwt } = require ('../middlewares/auth')
-const { getUserByUid, updateLike } = require ('../controllers/users')
+const { getUserByUid } = require ('../controllers/users')
 
 router.get('/', [authJwt.verifyToken], getUserByUid)
-router.put('/likes', [authJwt.verifyToken], updateLike)
+//router.put('/likes', [authJwt.verifyToken], updateLike)
+
 
 module.exports = router

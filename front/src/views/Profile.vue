@@ -3,23 +3,46 @@
     <div class="card w-96 bg-base-100 shadow-xl">
       <div class="card-body">
       <p>{{ text }}</p>  
+
       </div>  
     </div>
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters, mapState } from 'vuex';
+import PostItem from '@/components/PostItem.vue';
 export default {
+  name: 'Profile',
+  components:{
+    PostItem,
+  },
     data() {
         return {
-            text:'',
-            name: ''
-        }
+            showAddEventForm: false,        
+          }
+    },
+    computed:{
+      ...mapState('user',[
+        'user',
+        'favoriteEvents'
+      ]),
+      user(){
+        return this.$store.state.user.user;
+      },
+      events(){
+        return this.$store.state.event.events;
+
+      }
     },
     methods :{
-    ...mapActions({
-      getUserByUid: 'user/getUserByUid'
-    })
+    ...mapActions('user',[
+      'getUserByUid',
+      'getFavoriteEvents'
+    ])
+  },
+  beforeMount(){
+    this.getUserByUid();
+    this.getFavoriteEvents();
   },
     async mounted() {
     this.uid = localStorage.getItem('uid')
