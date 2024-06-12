@@ -5,6 +5,7 @@ import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import Profile from '@/views/Profile.vue'
 import instance from '@/middlewares'
+import UserNews from '@/views/UserNews.vue'
 
 /*проверка авторизирован ли пользователь прописывается сдесь*/
 const routes = [
@@ -32,7 +33,14 @@ const routes = [
   {
     path: '/profile',
     name: 'profile',
-    component: Profile
+    component: Profile,
+    meta: {auth: true}
+  },
+  {
+    path: '/news',
+    name: 'news',
+    component: UserNews,
+    meta: {auth: true}
   }
 
 ]

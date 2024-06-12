@@ -25,8 +25,7 @@ export default {
         return {
             email: '',
             password: '',
-            name: '',
-            security:''
+            name: ''
         }
     },
     methods: {
@@ -38,8 +37,7 @@ export default {
             const formData = {
                 email: this.email,
                 password: this.password,
-                name: this.name,
-                security: "defaultuser"
+                name: this.name
             }
             this.register(formData)
         }

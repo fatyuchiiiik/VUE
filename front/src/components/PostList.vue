@@ -2,9 +2,9 @@
     <div class="post-list">
         <div v-for="(event, index) in event" :key="id">
             <PostItem 
-                :bodyText="post.bodyText" 
-                :title="post.title"
-                :likes="post.likes"
+                :bodyText="event.bodyText" 
+                :title="event.title"
+                :likes="event.likes"
             />
         </div>
     </div>

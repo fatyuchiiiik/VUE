@@ -7,9 +7,10 @@
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a href="/">Главная</a></li>
-        <li><a href="/about">Новости</a></li>
+        <li><a href="/news">Новости</a></li>
         <li><a href="/profile">Личный кабинет</a></li>
         <li><a href="/register">Регистрация</a></li>
+        <li><a href="/about">admin</a> </li>
       </ul>
     </div>
   </div>

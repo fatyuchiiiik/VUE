@@ -11,13 +11,17 @@ export default {
     },
   },
   actions: {
-    async addevent({ title, bodyText, likes }) {
+    async addevent({ }, { title, bodyText, likes }) {
+      console.log(title, bodyText);
       const response = await fetch(`${process.env.VUE_APP_SERVER}/api/events/add`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json; charset=utf-8'
         },
-        body: JSON.stringify({ title, bodyText, likes })
+        body: JSON.stringify({ 
+          title,
+          bodyText, 
+          likes})
       });
       if (response.ok) {
         console.log("add ok");
@@ -30,12 +34,12 @@ export default {
     async getallevents({ commit }) {
       try {
         const response = await fetch(`${process.env.VUE_APP_SERVER}/api/events/getallevents`);
-        if (response.ok) {
+        // if (response.ok) {
           const events = await response.json();
           commit('SET_EVENTS', events);
-        } else {
-          console.error('Ошибка при получении мероприятий:', response.statusText);
-        }
+        // } else {
+          // console.error('Ошибка при получении мероприятий:', response.statusText);
+        // }
       } catch (error) {
         console.error('Ошибка при получении мероприятий:', error);
       }

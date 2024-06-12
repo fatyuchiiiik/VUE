@@ -1,5 +1,6 @@
 import instance from "@/middlewares";
 import router from "@/router";
+import user from "./user";
 
 const checkStatuses = (status) => {
     switch(status){
