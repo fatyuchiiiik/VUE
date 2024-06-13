@@ -11,13 +11,13 @@
     </div>
   </div>
   <div class="container mx-auto pt-10">
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card card-side bg-base-100 shadow-md flex">
       <div class="card-body">
       
-      <div class="events-grid">
+      
           <PostItem v-for="event in favoriteEvents" :key="event.uid" :event="event" />
          
-        </div>
+        
         
       </div>  
     </div>

@@ -9,6 +9,7 @@ exports.addevent = async (req, res) => {
       title: req.body.title,
       bodyText: req.body.bodyText,
       likes: req.body.likes,
+      imageUrl: req.body.imageUrl
     });
     return res.status(201).send({ message: 'added', uid: cur_event.uid });
   } catch (error) {

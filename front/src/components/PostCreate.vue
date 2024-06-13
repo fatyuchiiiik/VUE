@@ -3,6 +3,7 @@
     <form class="main-form mx-auto" @submit.prevent="goaddEvent()">
         <input type="text" placeholder="Введите название" class="input input-bordered w-full max-w-xs" v-model="title"/>
         <textarea class="textarea textarea-bordered" placeholder="Введите содержимое" v-model="bodyText"></textarea>
+        <input type="text" name="imageUrl" class="form-input" placeholder="image link..." required v-model="imageUrl">
         <!-- <button class="btn btn-secondary" @click="goaddEvent()">Создать пост</button> -->
         <button class="btn btn-secondary" type="submit">Создать пост</button>
     </form>
@@ -18,7 +19,8 @@ export default {
         return {
             title: '',
             bodyText: '',
-            likes: 0
+            likes: 0,
+            imageUrl: ''
         }
     },
     methods: {
@@ -41,7 +43,8 @@ goaddEvent() {
   const formData = {
     title: this.title,
     bodyText: this.bodyText,
-    likes: this.likes
+    likes: this.likes,
+    imageUrl: this.imageUrl
   };
   this.addevent(formData)
     .then(() => {

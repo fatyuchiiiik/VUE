@@ -11,7 +11,7 @@ export default {
     },
   },
   actions: {
-    async addevent({ }, { title, bodyText, likes }) {
+    async addevent({ }, { title, bodyText, likes, imageUrl }) {
       console.log(title, bodyText);
       const response = await fetch(`${process.env.VUE_APP_SERVER}/api/events/add`, {
         method: 'POST',
@@ -21,14 +21,16 @@ export default {
         body: JSON.stringify({ 
           title,
           bodyText, 
-          likes})
+          likes,
+          imageUrl
+        })
       });
       if (response.ok) {
         console.log("add ok");
-        window.alert('Мероприятие добавлено');
+        window.alert('Новость добавлена');
         //router.push('/EventsView');
       } else {
-        console.error('Ошибка при добавлении мероприятия:', response.statusText);
+        console.error('Ошибка при добавлении новости:', response.statusText);
       }
     },
     async getallevents({ commit }) {

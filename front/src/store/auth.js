@@ -2,6 +2,9 @@ import instance from "@/middlewares";
 import router from "@/router";
 import user from "./user";
 
+
+//const { auth } = require('../')
+
 const checkStatuses = (status) => {
     switch(status){
         case 400:
@@ -49,8 +52,27 @@ export default {
             router.push('/login')
             return
         },
-        async login({commit}, {email, password}) {
-            const data = JSON.stringify({email, password})
+        // async login({commit}, {email, password, role}) {
+        //     const data = JSON.stringify({email, password, role})
+        //     console.log(data);
+        //     const response = await fetch(`${process.env.VUE_APP_SERVER}/api/auth/signin`, {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json;charset=utf-8'
+        //         },
+        //         body: data 
+        //     })
+        //     if (!checkStatuses(response.status)) return 
+        //     const result = await response.json()
+        //     commit('setAuth', true)
+        //     localStorage.setItem('accessToken', result.accessToken)
+        //     localStorage.setItem('refreshToken', result.refreshToken)
+        //     localStorage.setItem('uid', result.uid)
+        //     router.push('/profile')
+        //     return
+        // },
+        async login({ commit }, { email, password, role }) {
+            const data = JSON.stringify({email, password, role})
             console.log(data);
             const response = await fetch(`${process.env.VUE_APP_SERVER}/api/auth/signin`, {
                 method: 'POST',
@@ -59,13 +81,18 @@ export default {
                 },
                 body: data 
             })
-            if (!checkStatuses(response.status)) return 
+            if (!checkStatuses(response.status)) return
             const result = await response.json()
             commit('setAuth', true)
             localStorage.setItem('accessToken', result.accessToken)
             localStorage.setItem('refreshToken', result.refreshToken)
             localStorage.setItem('uid', result.uid)
-            router.push('/profile')
+            if (localStorage.getItem("uid") == "1ec8ef79-aac5-4340-8396-3078922a82c7"){
+                console.log(localStorage.getItem("uid"))
+                router.push('/about')
+            } else{
+            //console.log(localStorage.getItem("uid"))
+            router.push('/news')}
             return
         },
         async changeAccess({}) {

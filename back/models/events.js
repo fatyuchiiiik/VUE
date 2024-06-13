@@ -24,7 +24,11 @@ const event = sequelize.define(
     likes: {
         type: DataTypes.BIGINT,
         
-      }
+      },
+    imageUrl: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    }
   },
   {
     tableName: 'events',

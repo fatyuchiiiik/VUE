@@ -7,7 +7,7 @@ import Profile from '@/views/Profile.vue'
 import instance from '@/middlewares'
 import UserNews from '@/views/UserNews.vue'
 
-/*проверка авторизирован ли пользователь прописывается сдесь*/
+/*проверка авторизирован ли пользователь прописывается здесь*/
 const routes = [
   { // Мета добавления маршрута
     path: '/',
@@ -17,8 +17,9 @@ const routes = [
   {
     path: '/about',
     name: 'about',
+    alwaysShow: false,
     component: AboutView,
-    meta: {auth: true}
+    meta: {auth: true},
   },
   {
     path: '/login',
@@ -44,7 +45,15 @@ const routes = [
   }
 
 ]
-
+// export const asyncRoutes = [
+//   {
+//     path: '/about',
+//     name: 'about',
+//     alwaysShow: false,
+//     component: AboutView,
+//     meta: {auth: true, uid:"1ec8ef79-aac5-4340-8396-3078922a82c7"},
+//   }
+// ]
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
@@ -59,14 +68,14 @@ router.beforeEach(async(to, from, next)=>
       if (response.status==200){
         return next()
       } else if (response.status==401){
-        return next('/login')
+        return next('/')
 
       }
     }
     return next()
   } catch{
     console.log(error.message);
-    return next('/login')
+    return next('/')
   }
 })
 

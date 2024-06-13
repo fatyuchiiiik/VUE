@@ -12,6 +12,7 @@
   import PostItem from '@/components/PostItem.vue';
   import PostCreate from '@/components/PostCreate.vue';
   import PostList from '@/components/PostList.vue';
+import auth from '@/store/auth';
   // import event from '@/store/event';
   
   export default {

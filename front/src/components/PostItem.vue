@@ -1,9 +1,9 @@
 <template>
     <div class="container mx-auto pt-10">
   <div class="card card-side bg-base-100 shadow-md flex">
-
+    <div class="size-45"><img :src="event.imageUrl" class="event-image"/></div>
   <div class="card-body">
-    <h2 class="card-title text-xl">
+    <h2 class="card-title text-2xl">
         {{ event.title }}
     </h2>
     <p class="text-lg font-semibold">

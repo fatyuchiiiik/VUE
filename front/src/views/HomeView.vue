@@ -39,40 +39,40 @@ export default {
       updateLikes: 'user/updateLikes',
       getUserByUid: 'user/getUserByUid'
     }),
-    addLike(){
-      this.likes+=1
-      if (this.uid){
-        this.updateLikes({likes: this.likes})
-      }
-    },
-    addDislike(){
-      this.likes-=1
-    },
+    // addLike(){
+    //   this.likes+=1
+    //   if (this.uid){
+    //     this.updateLikes({likes: this.likes})
+    //   }
+    // },
+    // addDislike(){
+    //   this.likes-=1
+    // },
   },
-  watch:{
-    likes(){
-      if (this.likes<0){
-        this.likes=0
-      }
-    }
-  },
-  async mounted() {
-    this.uid = localStorage.getItem('uid')
-    if(this.uid) {
-      await this.getUserByUid()
-      this.likes = this.$store.state.user.user?.likes || 0
-      this.name = this.$store.state.user.user?.name
-      this.text = `Вы авторизованы как ${this.name}, количество лайков:${this.likes}`
+  // watch:{
+  //   likes(){
+  //     if (this.likes<0){
+  //       this.likes=0
+  //     }
+  //   }
+  // },
+  // async mounted() {
+  //   this.uid = localStorage.getItem('uid')
+  //   if(this.uid) {
+  //     await this.getUserByUid()
+  //     this.likes = this.$store.state.user.user?.likes || 0
+  //     this.name = this.$store.state.user.user?.name
+  //     this.text = `Вы авторизованы как ${this.name}, количество лайков:${this.likes}`
 
-    } else{
-      this.text = 'You are not authorized'
-    }
+  //   } else{
+  //     this.text = 'You are not authorized'
+  //   }
 
 
-  },
-  components: {
+  // },
+  // components: {
     
-  }
+  // }
 }
 </script>
 <style>

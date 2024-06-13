@@ -10,12 +10,12 @@
         <li><a href="/news">Новости</a></li>
         <li><a href="/profile">Личный кабинет</a></li>
         <li><a href="/register">Регистрация</a></li>
-        <li><a href="/about">admin</a> </li>
+        <li><a href="/about">Администратор</a> </li>
       </ul>
     </div>
   </div>
   <div class="navbar-center">
-    <a class="btn btn-ghost text-lg" href="/">Проектные решения 1С</a>
+    <a class="btn btn-ghost text-3xl" href="/">Проектные решения 1С</a>
   </div>
   <div class="navbar-end">
     <a class="btn" @click="logout()" href="/login">выйти</a>

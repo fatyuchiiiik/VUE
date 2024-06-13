@@ -26,7 +26,6 @@ exports.signup = async (req, res) => {
             uid: authed.uid,
             name: req.body.name,
             likes: 0,
-            security: req.body.security,
         })
         return res.status(201).send({ message: 'registred', uid: createdUser.uid })
     } catch (error) {
