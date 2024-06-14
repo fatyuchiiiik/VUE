@@ -5,17 +5,17 @@
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
         <svg xmlns="C:\Users\admin\Desktop\Кудреватых\VUE22\VUE\front\src\views\image 16.png" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </div>
-      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a href="/">Главная</a></li>
+      <nav tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><router-link to="/">Главная</router-link></li>
         <li><a href="/news">Новости</a></li>
         <li><a href="/profile">Личный кабинет</a></li>
         <li><a href="/register">Регистрация</a></li>
         <li><a href="/about">Администратор</a> </li>
-      </ul>
+      </nav>
     </div>
   </div>
   <div class="navbar-center">
-    <a class="btn btn-ghost text-3xl" href="/">Проектные решения 1С</a>
+    <a class="btn btn-ghost block mt-1 text-xl leading-tight" href="/">Проектные решения 1С</a>
   </div>
   <div class="navbar-end">
     <a class="btn" @click="logout()" href="/login">выйти</a>

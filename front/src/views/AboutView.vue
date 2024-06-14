@@ -1,8 +1,9 @@
 <template>
-  <div class="container mx-auto pt-10" v-show="value2">
-  <div class="card card-side bg-base-100 shadow-md flex">
+  
+  <div class="md:flex" v-show="value2">
+  <div class="card card-side bg-base-100 max-w-md mx-auto rounded-2xl shadow-md overflow-hidden md:max-w-3xl">
   <div class="card-body">
-    <h2 class="card-title text-lg">Права доступа ограничены</h2>
+    <h2 class="card-title block mt-1 text-lg leading-tight">Права доступа ограничены</h2>
     
     <p>Если вы - администратор, зайдите под рабочей учетной записью
     </p>
@@ -11,7 +12,8 @@
     </div>
   </div>
 </div>
-</div>
+  </div>
+
   <div class="about" v-show="value1">
     <PostCreate @submit.prevent="goaddEvent()"/>
     <PostList/>
@@ -19,6 +21,7 @@
     <div v-show="value1"></div>
     <!-- <PostList :posts="posts" />  -->
   </div>
+
 </template>
 
 <script>
